@@ -1,4 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
+using System.Text;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add CORS policy access
@@ -14,6 +19,34 @@ builder.Services.AddCors(options =>
     });
 });
 
+// add AUTH JWT Bearer
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(
+        options =>
+        {
+            string key = "kjahfkljahflajhr380nfcajdklsfhsaoueihf3cd";
+            string issuerX = "T2305M_SEM3";
+            string audienceX = "T2305M_ASPNET";
+            int lifeTime = 360;
+
+            options.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuer = true,
+                ValidateAudience = true,
+                ValidateLifetime = true,
+                ValidateIssuerSigningKey = true,
+
+                ValidIssuer = issuerX,
+                ValidAudience = audienceX,
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key))
+            };
+        }
+    );
+// Add authorize policy
+builder.Services.AddAuthorization(options => {
+    //options.AddPolicy("ADMIN", policy => policy.RequireClaim(Cl))
+    options.AddPolicy("AUTH", policy => policy.RequireClaim(ClaimTypes.NameIdentifier));
+});
 // connect db
 T2305M_API.Entities.T2305mApiContext.ConnectionString = builder.Configuration.GetConnectionString("T2305M_API");
 builder.Services.AddDbContext<T2305M_API.Entities.T2305mApiContext>(

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using T2305M_API.Entities;
 using T2305M_API.DTO.ResponseModel;
 using T2305M_API.DTO.RequestModel.Category;
+using Microsoft.AspNetCore.Authorization;
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace T2305M_API.Controllers
@@ -21,6 +22,7 @@ namespace T2305M_API.Controllers
         }
 
         [HttpGet]
+        [Authorize(Policy = "AUTH")]
         public IActionResult Index()
         {
             List<Category> categories = _context.Categories.ToList();
@@ -34,6 +36,7 @@ namespace T2305M_API.Controllers
 
         [HttpGet]
         [Route("find")]
+        [Authorize(Roles = "ADMIN")]
         public IActionResult Get(int id)
         {
             try
