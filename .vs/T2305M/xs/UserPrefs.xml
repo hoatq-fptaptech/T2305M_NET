@@ -1,19 +1,13 @@
 ﻿<Properties StartupConfiguration="{A961B98F-E004-4C28-BA47-590278AC11D4}|https">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.T2305M__MVC PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="T2305M_API/Program.cs">
     <Files>
       <File FileName="T2305M_API/Entities/Product.cs" />
       <File FileName="T2305M_API/Entities/Category.cs" />
       <File FileName="T2305M_API/Entities/User.cs" />
-      <File FileName="T2305M_API/Program.cs" Line="3" Column="1" />
-      <File FileName="T2305M_API/Controllers/CategoryController.cs" Line="66" Column="14" />
+      <File FileName="T2305M_API/Program.cs" Line="47" Column="1" />
+      <File FileName="T2305M_API/Controllers/CategoryController.cs" />
       <File FileName="T2305M_API/DTO/ResponseModel/CategoryResponse.cs" />
-      <File FileName="T2305M_API/DTO/ResponseModel/ProductResponse.cs" />
+      <File FileName="T2305M_API/DTO/ResponseModel/ProductResponse.cs" Line="1" Column="1" />
       <File FileName="T2305M_API/DTO/RequestModel/Category/CreateCategory.cs" />
       <File FileName="T2305M_API/DTO/RequestModel/Category/EditCategory.cs" />
     </Files>
@@ -33,13 +27,18 @@
                 <Node name="ResponseModel" expanded="True" />
               </Node>
               <Node name="Entities" expanded="True" />
-              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.T2305M__API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.T2305M__MVC PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.T2305M__API PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>

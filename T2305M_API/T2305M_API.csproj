@@ -21,6 +21,8 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.15" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,6 +31,8 @@
     <None Remove="DTO\ResponseModel\" />
     <None Remove="DTO\RequestModel\" />
     <None Remove="DTO\RequestModel\Category\" />
+    <None Remove="DTO\RequestModel\Auth\" />
+    <None Remove="DTO\ResponseModel\Auth\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
@@ -36,5 +40,7 @@
     <Folder Include="DTO\ResponseModel\" />
     <Folder Include="DTO\RequestModel\" />
     <Folder Include="DTO\RequestModel\Category\" />
+    <Folder Include="DTO\RequestModel\Auth\" />
+    <Folder Include="DTO\ResponseModel\Auth\" />
   </ItemGroup>
 </Project>
