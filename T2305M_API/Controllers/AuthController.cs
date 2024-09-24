@@ -22,18 +22,21 @@ namespace T2305M_API.Controllers
     public class AuthController : Controller
     {
         private readonly T2305mApiContext _context;
+        private readonly IConfiguration _config;
 
-        public AuthController(T2305mApiContext context)
+        public AuthController(T2305mApiContext context,
+            IConfiguration configuration)
         {
             _context = context;
+            _config = configuration;
         }
 
         private string GenJWT(User user)
         {
-            string key = "kjahfkljahflajhr380nfcajdklsfhsaoueihf3cd";
-            string issuerX = "T2305M_SEM3";
-            string audienceX = "T2305M_ASPNET";
-            int lifeTime = 360;
+            string key = _config["JWT:Key"];
+            string issuerX = _config["JWT:Issuer"];
+            string audienceX = _config["JWT:Audience"];
+            int lifeTime = Convert.ToInt32(_config["JWT:Lifetime"]);
 
             var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
             var signatureKey = new SigningCredentials(secretKey,

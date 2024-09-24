@@ -13,6 +13,7 @@ namespace T2305M_API.Controllers
 {
     [ApiController]
     [Route("/api/category")]
+    //[Authorize(Policy = "AUTH")]
     public class CategoryController : Controller
     {
         private readonly T2305mApiContext _context;

@@ -1,15 +1,21 @@
 ﻿<Properties StartupConfiguration="{A961B98F-E004-4C28-BA47-590278AC11D4}|https">
-  <MonoDevelop.Ide.Workbench ActiveDocument="T2305M_API/Program.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.T2305M__MVC PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="T2305M_API/Controllers/CategoryController.cs">
     <Files>
       <File FileName="T2305M_API/Entities/Product.cs" />
       <File FileName="T2305M_API/Entities/Category.cs" />
-      <File FileName="T2305M_API/Entities/User.cs" />
-      <File FileName="T2305M_API/Program.cs" Line="47" Column="1" />
-      <File FileName="T2305M_API/Controllers/CategoryController.cs" />
-      <File FileName="T2305M_API/DTO/ResponseModel/CategoryResponse.cs" />
-      <File FileName="T2305M_API/DTO/ResponseModel/ProductResponse.cs" Line="1" Column="1" />
-      <File FileName="T2305M_API/DTO/RequestModel/Category/CreateCategory.cs" />
-      <File FileName="T2305M_API/DTO/RequestModel/Category/EditCategory.cs" />
+      <File FileName="T2305M_API/Entities/User.cs" Line="15" Column="1" />
+      <File FileName="T2305M_API/Program.cs" Line="48" Column="51" />
+      <File FileName="T2305M_API/Controllers/AuthController.cs" Line="45" Column="32" />
+      <File FileName="T2305M_API/DTO/ResponseModel/Auth/AuthResponse.cs" Line="8" Column="3" />
+      <File FileName="T2305M_API/Properties/launchSettings.json" Line="26" Column="48" />
+      <File FileName="T2305M_API/DTO/RequestModel/Auth/LoginModel.cs" Line="9" Column="42" />
+      <File FileName="T2305M_API/Controllers/CategoryController.cs" Line="23" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,28 +23,29 @@
           <Node name="T2305M" expanded="True">
             <Node name="T2305M_API" expanded="True">
               <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True" />
                 <Node name="PackageDependencies" expanded="True" />
               </Node>
-              <Node name="Controllers" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="CategoryController.cs" selected="True" />
+              </Node>
               <Node name="DTO" expanded="True">
                 <Node name="RequestModel" expanded="True">
+                  <Node name="Auth" expanded="True" />
                   <Node name="Category" expanded="True" />
                 </Node>
-                <Node name="ResponseModel" expanded="True" />
+                <Node name="ResponseModel" expanded="True">
+                  <Node name="Auth" expanded="True" />
+                </Node>
               </Node>
               <Node name="Entities" expanded="True" />
+              <Node name="Properties" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.T2305M__MVC PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.T2305M__API PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>

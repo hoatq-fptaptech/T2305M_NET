@@ -14,4 +14,6 @@ public partial class User
     public string? Password { get; set; }
 
     public string Role { get; set; } = null!;
+
+    public int Age { get; set; } = 0!;
 }
