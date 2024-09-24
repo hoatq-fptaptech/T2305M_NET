@@ -13,7 +13,7 @@ namespace T2305M_API.Controllers
 {
     [ApiController]
     [Route("/api/category")]
-    //[Authorize(Policy = "AUTH")]
+    [Authorize(Policy = "AUTH")]
     public class CategoryController : Controller
     {
         private readonly T2305mApiContext _context;
@@ -23,7 +23,7 @@ namespace T2305M_API.Controllers
         }
 
         [HttpGet]
-        [Authorize(Policy = "AUTH")]
+        [Authorize(Policy = "ValidYearOld")]
         public IActionResult Index()
         {
             List<Category> categories = _context.Categories.ToList();
